@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Meal Recipe</title>
+
+    <!--**********************************     Bootsrap CSS LINK ADD   *****************************-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- ****************************    Bootsrap Icon Link  Add    ****************************** -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!----****************************     CSS Link Add   *****************************************8---->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- *******************************  Navbar  ********************************************** -->
+    <nav class="navbar navbar-expand-lg bg-primary py-2">
+        <a href="./index.html" id="home-page-link" class=" text-light ms-5">
+            <h2> <i class="bi bi-house-door-fill"></i> </h2></i>
+        </a>
+        <div id="title" class="navbar-brand mx-auto text-light">Favourite Meal</div>
+
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="meal-wrapper ">
+            <div class="meal-search">
+            </div>
+            <div class="meal-result">
+                <!--  *******************************    API Get  ***********************************-->
+                <div id="meal">
+
+                </div>
+            </div>
+
+
+            <div class="meal-details ">
+                <!---********************   Close Meal Detail Page   **************************** -->
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
+
+                <!--******************************    Meal detailcontent       *****************--->
+                <div class="meal-details-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--  ****************  Show A popUp item is succesfully remove from your cart  -*********-->
+    <div class="d-flex text-white align-items-center bg-danger border-0 position-fixed p-2 popupRem rounded"
+        id="popupRem" role="alert">
+        <div class="pop-body me-3">
+            Item is Successfully Removed
+        </div>
+        <button type="button" class="btn-close btn-close-white ms-auto me-2" onclick="closePopup()"></button>
+    </div>
+    <script src="./favMeal.js"></script>
+</body>
+
+</html>
